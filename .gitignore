@@ -1,0 +1,16 @@
+# Cache local de capas baixadas — nunca versionar (imagens de terceiros)
+covers_cache/*
+!covers_cache/.gitkeep
+
+# Backups de banco de dados
+*.db.backup*
+*.db-journal
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Configuracao opcional de navegador (dado pessoal do usuario)
+browser_config.json
+*.db-wal
+*.db-shm
