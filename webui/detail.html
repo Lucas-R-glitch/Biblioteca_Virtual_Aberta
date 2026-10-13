@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="detail-shell">
+  <div id="toast" class="toast hidden"></div>
+  <main class="detail-page" id="detailPage">
+    <section class="detail-card hidden" id="detailCard">
+      <div class="detail-hero">
+        <div class="detail-cover-column">
+          <div class="detail-cover-frame">
+            <img id="detailCover" data-adaptive-cover="detail" alt="Capa da obra">
+            <div id="detailCoverFallback" class="detail-cover-fallback hidden">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v17a1 1 0 0 1-1 1H6.5A2.5 2.5 0 0 1 4 18.5v-14Z"/>
+                <path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/>
+              </svg>
+              <span>Sem capa</span>
+            </div>
+          </div>
+          <span class="detail-updated" id="detailUpdated">Atualizado: -</span>
+        </div>
+
+        <div class="detail-info-column">
+          <div class="detail-heading">
+            <div>
+              <p class="eyebrow">Detalhes</p>
+              <h1 id="detailTitle">Obra</h1>
+              <p class="detail-author" id="detailAuthor">Autor não informado</p>
+            </div>
+          </div>
+
+          <div class="chip-row">
+            <span class="chip chip-type" id="detailType">Livro</span>
+            <span class="chip-row-inline" id="detailCategory"></span>
+            <span class="chip chip-status" id="detailStatus">Quero Ler</span>
+          </div>
+
+          <div class="detail-progress-panel">
+            <div class="detail-progress-top">
+              <strong id="detailProgressSummary">Último visto ainda não informado</strong>
+              <button class="mini-btn" id="detailToggleProgress">Progresso</button>
+            </div>
+            <div class="progress-hidden-copy" id="detailProgressHint">Clique em Progresso para revelar percentual e total.</div>
+            <div class="progress-shell hidden" id="detailProgressWrap">
+              <div class="progress-track">
+                <div class="progress-fill" id="detailProgressFill"></div>
+              </div>
+              <div class="progress-meta">
+                <span id="detailProgressCaption">Página atual: -</span>
+                <span id="detailProgressPercent">Sem total</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-actions-grid">
+            <button class="btn btn-success" id="detailContinue">Continuar leitura</button>
+            <button class="btn btn-secondary" id="detailEdit">Editar</button>
+            <button class="btn btn-accent" id="detailOpenLink">Abrir link</button>
+            <button class="btn btn-muted" id="detailCopyLink">Copiar link</button>
+            <button class="btn btn-muted" id="detailOpenCover">Abrir capa</button>
+            <button class="btn btn-danger" id="detailDelete">Excluir obra</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-notes-card">
+        <div class="notes-block">
+          <span class="panel-label">Link salvo</span>
+          <p id="detailLink">Nenhum link salvo.</p>
+        </div>
+        <div class="notes-block">
+          <span class="panel-label">Observações</span>
+          <p id="detailNotes">Nenhuma observação salva.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/cover-utils.js"></script>
+  <script src="/book-modal.js"></script>
+  <script src="/detail.js"></script>
+</body>
+</html>

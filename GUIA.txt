@@ -1,0 +1,167 @@
+========================================================
+ GUIA DE USO - BIBLIOTECA VIRTUAL ABERTA
+========================================================
+
+Este documento explica como usar o aplicativo depois de
+instalado: como entrar, cadastrar livros, organizar com
+tags e aproveitar os recursos da interface.
+
+
+--------------------------------------------------------
+1. ACESSANDO O APLICATIVO
+--------------------------------------------------------
+
+Ao abrir o app.pyw, a primeira tela é de login. Você tem
+duas abas: "Entrar" e "Criar conta".
+
+CONTA DE DEMONSTRAÇÃO
+(se você estiver usando a versão com dados de exemplo)
+
+    Usuário .... Visitante
+    E-mail ..... demo@bibliotecavirtual.app
+    Senha ...... demo1234
+
+Essa conta já vem com 5 livros fictícios cadastrados, só
+pra você ver o app funcionando sem precisar cadastrar nada
+primeiro. Na tela de login existe um botão "Visitante
+(demo)" que já preenche e entra nessa conta automaticamente,
+sem precisar digitar nada.
+
+CRIANDO SUA PRÓPRIA CONTA
+
+Na aba "Criar conta", preencha nome, e-mail (ou um
+identificador qualquer) e senha (mínimo de 8 caracteres).
+Cada conta é isolada — o
+que você cadastra não aparece pra ninguém mais que use o
+mesmo app.
+
+Se errar a senha 5 vezes seguidas, o login fica bloqueado por
+1 minuto — é uma proteção; é só aguardar e tentar de novo.
+
+Dica: marque "Lembrar usuário na próxima entrada" na tela
+de login pra não precisar digitar o e-mail toda vez.
+
+
+--------------------------------------------------------
+2. ADICIONANDO UM LIVRO
+--------------------------------------------------------
+
+1. Clique em "+ Adicionar livro", no canto superior direito.
+2. Preencha os campos principais:
+   - Título e Autor
+   - Status: Quero Ler, Lendo ou Concluído
+   - Categorias: veja a seção 4
+3. Adicione uma capa (seção 3, abaixo) — opcional, mas
+   deixa o card mais bonito.
+4. Preencha, se quiser: última página/capítulo, total de
+   páginas, link de leitura e observações.
+5. Clique em Salvar.
+
+O livro aparece imediatamente na tela principal, dentro da
+coleção Livros.
+
+
+--------------------------------------------------------
+3. COLOCANDO UMA CAPA
+--------------------------------------------------------
+
+No formulário de adicionar/editar livro, você tem três
+formas diferentes de definir a capa — use a que for mais
+prática:
+
+  COLAR UMA IMAGEM COPIADA
+  Copie uma imagem (Ctrl+C em qualquer lugar — navegador,
+  explorador de arquivos, etc.) e, com o formulário aberto,
+  aperte Ctrl+V
+
+  ESCOLHER UM ARQUIVO
+  Clique no botão "Escolher imagem" e selecione um arquivo
+  do seu computador
+
+  LINK OU CAMINHO LOCAL
+  Cole uma URL de imagem, ou digite o caminho de um arquivo
+  já salvo no seu PC, no campo de capa
+
+A prévia da capa aparece na lateral direita do formulário
+assim que você define uma — se não aparecer nada, o campo
+está vazio ou o caminho não foi encontrado.
+
+
+--------------------------------------------------------
+4. CATEGORIAS E TAGS
+--------------------------------------------------------
+
+Cada livro pode ter várias categorias ao mesmo tempo
+(ex: "Romance" + "Aventura" no mesmo livro).
+
+AO CADASTRAR/EDITAR UM LIVRO
+As categorias aparecem como balões clicáveis no formulário
+— clique nas que quiser aplicar (pode marcar quantas
+quiser); clique de novo pra desmarcar.
+
+CRIANDO UMA CATEGORIA NOVA
+Clique no botão "+ Tag" ao lado de "Categorias" (tanto no
+formulário quanto na barra lateral da tela principal),
+digite o nome, e ela já fica disponível pra usar
+imediatamente — inclusive nos livros que você já tem
+cadastrados.
+
+GERENCIANDO TAGS DIRETO PELO CARD
+Sem precisar abrir o formulário inteiro: cada card tem um
+botão "+" ao lado das tags — clique nele pra abrir uma
+lista rápida e marcar/desmarcar categorias na hora.
+
+Obs: se um livro tiver mais de 3 categorias, o card mostra
+só as 3 primeiras e uma barra "/" indicando que tem mais —
+pra ver todas, clique no livro e abra os detalhes.
+
+
+--------------------------------------------------------
+5. NAVEGANDO PELA COLEÇÃO
+--------------------------------------------------------
+
+  Coleção ............. alterna entre "Livros" e "Favoritos"
+                        (obras marcadas com a estrela)
+  Buscar .............. procura por título, autor,
+                        categoria, link ou observações —
+                        tudo de uma vez
+  Tags e categorias ... filtra a lista mostrando só livros
+                        daquela categoria
+  Status .............. filtra por Quero Ler / Lendo /
+                        Concluído
+  Ordenar por ......... Recentes, Progresso ou A-Z
+
+
+--------------------------------------------------------
+6. CARD DO LIVRO
+--------------------------------------------------------
+
+Por padrão, cada card mostra só o essencial: capa, título,
+autor e tags — como uma prateleira real.
+
+Clique em "Ver mais" no card pra revelar:
+  - Progresso de leitura (clique em "Progresso" pra mostrar
+    o percentual e a página atual)
+  - Botões de ação: Continuar leitura, Abrir link, Copiar
+    link, Editar, Excluir
+
+Clique na capa ou no título do livro pra abrir a janela de
+detalhes completa, numa janela separada.
+
+
+--------------------------------------------------------
+7. FAVORITOS
+--------------------------------------------------------
+
+Clique na estrela no canto superior do card pra
+favoritar/desfavoritar. Livros favoritados aparecem na
+coleção Favoritos, além de continuarem na lista normal.
+
+
+--------------------------------------------------------
+8. EXCLUINDO UM LIVRO
+--------------------------------------------------------
+
+Pelo botão Excluir (dentro de "Ver mais" no card, ou na
+janela de detalhes) — o app sempre pede confirmação antes
+de apagar, então não tem risco de exclusão acidental.

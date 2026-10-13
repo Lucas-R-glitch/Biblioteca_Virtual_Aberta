@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Virtual Aberta</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="app-shell">
+  <div id="toast" class="toast hidden"></div>
+
+  <section class="auth-shell" id="authScreen">
+    <div class="auth-card">
+      <div class="auth-switch">
+        <button class="switch-btn is-active" id="loginTabBtn">Entrar</button>
+        <button class="switch-btn" id="registerTabBtn">Criar conta</button>
+        <button class="switch-btn demo-btn" id="demoLoginBtn" type="button" title="Entra automaticamente na conta de demonstracao">★ Visitante (demo)</button>
+      </div>
+
+      <div class="auth-pane" id="loginPane">
+        <h1>Biblioteca Virtual Aberta</h1>
+        <p class="subtitle">Sua estante digital para organizar livros, capas, links e progresso de leitura.</p>
+        <div class="field">
+          <label>Email ou usuário</label>
+          <input type="text" id="loginEmail" placeholder="Seu email ou usuário">
+        </div>
+        <div class="field">
+          <label>Senha</label>
+          <div class="password-row">
+            <input type="password" id="loginPassword" placeholder="Digite sua senha">
+            <button type="button" class="mini-btn password-toggle" data-target="loginPassword">Mostrar</button>
+          </div>
+        </div>
+        <label class="remember-row" for="rememberLogin">
+          <input type="checkbox" id="rememberLogin">
+          <span>Lembrar usuario na proxima entrada</span>
+        </label>
+        <button class="btn btn-primary" id="loginButton">Entrar</button>
+      </div>
+
+      <div class="auth-pane hidden" id="registerPane">
+        <h1>Criar conta</h1>
+        <p class="subtitle">Cadastre-se para manter livros, links, capas e progresso sempre salvos.</p>
+        <div class="field">
+          <label>Nome</label>
+          <input type="text" id="registerName" placeholder="Seu nome">
+        </div>
+        <div class="field">
+          <label>Email ou usuário</label>
+          <input type="text" id="registerEmail" placeholder="Escolha um email ou usuário">
+        </div>
+        <div class="field split-2">
+          <div>
+            <label>Senha</label>
+            <div class="password-row">
+              <input type="password" id="registerPassword" placeholder="Crie uma senha (mín. 8 caracteres)">
+              <button type="button" class="mini-btn password-toggle" data-target="registerPassword">Mostrar</button>
+            </div>
+          </div>
+          <div>
+            <label>Confirmar senha</label>
+            <div class="password-row">
+              <input type="password" id="registerPasswordConfirm" placeholder="Repita a senha">
+              <button type="button" class="mini-btn password-toggle" data-target="registerPasswordConfirm">Mostrar</button>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" id="registerButton">Cadastrar</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard-shell hidden" id="dashboardScreen">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Coleção pessoal</p>
+        <h1>Biblioteca Virtual Aberta</h1>
+        <p class="hero-text" id="heroGreeting">Bem-vindo.</p>
+
+        <div class="collection-tabs">
+          <span class="tab-label">Coleção</span>
+          <div class="segment-control" id="collectionTabs">
+            <span class="segment-indicator"></span>
+            <button class="segment-btn is-active" data-collection="Livro">Livros</button>
+            <button class="segment-btn" data-collection="__favorites__">Favoritos</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn btn-success" id="addBookButton">+ Adicionar livro</button>
+        <button class="btn btn-danger" id="logoutButton">Sair</button>
+      </div>
+    </header>
+
+    <section class="summary-grid" id="summaryGrid">
+      <article class="summary-card accent-cyan">
+        <span class="summary-title">Total de livros</span>
+        <strong class="summary-value" id="totalCount">0</strong>
+        <span class="summary-caption">Visão geral da coleção</span>
+      </article>
+      <article class="summary-card accent-blue">
+        <span class="summary-title">Lendo</span>
+        <strong class="summary-value" id="readingCount">0</strong>
+        <span class="summary-caption">Em andamento agora</span>
+      </article>
+      <article class="summary-card accent-purple">
+        <span class="summary-title">Quero Ler</span>
+        <strong class="summary-value" id="wantCount">0</strong>
+        <span class="summary-caption">Na fila da próxima leitura</span>
+      </article>
+      <article class="summary-card accent-green">
+        <span class="summary-title">Concluídos</span>
+        <strong class="summary-value" id="doneCount">0</strong>
+        <span class="summary-caption">Obras finalizadas</span>
+      </article>
+    </section>
+
+    <section class="controls-shell">
+      <div class="search-panel">
+        <label for="searchInput">Buscar</label>
+        <div class="search-input-shell">
+          <input type="text" id="searchInput" placeholder="Buscar por titulo, autor, categoria, link ou observacoes...">
+        </div>
+        <div class="search-meta">
+          <div class="tag-filter-head">
+            <span class="panel-label">Tags e categorias</span>
+            <button type="button" class="tag-add-btn" id="addCategoryButton" aria-label="Adicionar nova tag">+</button>
+          </div>
+          <div class="tag-filter-row" id="categoryFilter"></div>
+        </div>
+      </div>
+
+      <div class="filter-panel">
+        <div class="filter-group">
+          <span class="panel-label">Status</span>
+          <div class="segment-control" id="statusFilter">
+            <span class="segment-indicator"></span>
+            <button class="segment-btn is-active" data-status="">Todos</button>
+            <button class="segment-btn" data-status="Quero Ler">Quero Ler</button>
+            <button class="segment-btn" data-status="Lendo">Lendo</button>
+            <button class="segment-btn" data-status="Concluído">Concluídos</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <span class="panel-label">Ordenar por</span>
+          <div class="segment-control" id="sortFilter">
+            <span class="segment-indicator"></span>
+            <button class="segment-btn is-active" data-sort="recent">Recentes</button>
+            <button class="segment-btn" data-sort="progress">Progresso</button>
+            <button class="segment-btn" data-sort="title">A-Z</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection-header">
+      <div>
+        <h2 id="collectionTitle">Seus livros</h2>
+        <p class="subtitle" id="collectionSubtitle">Coleção ampla com capas em destaque, progresso discreto e ações rápidas.</p>
+      </div>
+    </section>
+
+    <section class="books-grid" id="booksGrid"></section>
+  </section>
+
+  <button type="button" class="scroll-top-btn hidden" id="scrollTopButton" aria-label="Voltar ao topo">↑</button>
+
+  <script src="/cover-utils.js"></script>
+  <script src="/book-modal.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>
